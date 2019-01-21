@@ -9,7 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dummyData
+      posts: dummyData
     };
   }
   render() {
@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer />
+        <PostContainer posts={this.state.posts} />
         <Button color="danger">Danger!</Button>
       </div>
     );

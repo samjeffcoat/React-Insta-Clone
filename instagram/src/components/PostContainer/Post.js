@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 
-class Post extends Component {
-  render() {
-    return <div>Post is working</div>;
-  }
-}
+const Post = props => {
+  return (
+    <div>
+      username= {props.post.username}
+      thumbnailUrl= {props.post.thumbnailUrl}
+    </div>
+  );
+};
 
 export default Post;

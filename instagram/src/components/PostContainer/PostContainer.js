@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import Post from "./Post";
-import CommentSection from "../CommentSection/CommentSection";
-class PostContainer extends Component {
-  render() {
-    return (
-      <div>
-        <Post />
-        <CommentSection />
-      </div>
-    );
-  }
-}
+
+const PostContainer = props => {
+  return (
+    <div className="posts-container">
+      {props.posts.map(banana => (
+        <Post key={banana.imageUrl} post={banana} />
+      ))}
+    </div>
+  );
+};
 
 export default PostContainer;

@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 
-class Comment extends Component {
-  render() {
-    return <div>{}</div>;
-  }
-}
+const Comment = props => {
+  return <div>{props.comments.username}</div>;
+};
 
 export default Comment;
