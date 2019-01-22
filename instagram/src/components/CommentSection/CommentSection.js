@@ -10,6 +10,11 @@ class CommentSection extends React.Component {
     };
   }
 
+  handleChange = e => {
+    e.preventDefault();
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
   addNewComment = e => {
     e.preventDefault();
     this.setState({
@@ -30,7 +35,11 @@ class CommentSection extends React.Component {
         {this.state.comments.map((comment, index) => (
           <Comment key={index} comment={comment} />
         ))}
-        <CommentInput addNewComment={this.addNewComment} />
+        <CommentInput
+          addNewComment={this.addNewComment}
+          handleChange={this.handleChange}
+          comment={this.state.newCommentText}
+        />
       </div>
     );
   }
