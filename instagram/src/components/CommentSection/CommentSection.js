@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Comment from "./Comment";
+import CommentInput from "./CommentInput";
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
@@ -14,6 +15,7 @@ class CommentSection extends React.Component {
         {this.state.comments.map((comment, index) => (
           <Comment key={index} comment={comment} />
         ))}
+        <CommentInput />
       </div>
     );
   }
