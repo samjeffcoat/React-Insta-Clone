@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
-import { Button } from "reactstrap";
 import dummyData from "./dummy-data";
 
 class App extends Component {
@@ -18,7 +17,6 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         <PostContainer posts={this.state.posts} />
-        <Button color="danger">Danger!</Button>
       </div>
     );
   }
