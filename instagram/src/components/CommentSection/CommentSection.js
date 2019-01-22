@@ -5,9 +5,24 @@ class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: props.comments
+      comments: props.comments,
+      newCommentText: " "
     };
   }
+
+  addNewComment = e => {
+    e.preventDefault();
+    this.setState({
+      comments: [
+        ...this.state.comments,
+        {
+          text: this.state.newCommentText,
+          username: "thevillageidiot"
+        }
+      ],
+      newCommentText: " "
+    });
+  };
 
   render() {
     return (
@@ -15,7 +30,7 @@ class CommentSection extends React.Component {
         {this.state.comments.map((comment, index) => (
           <Comment key={index} comment={comment} />
         ))}
-        <CommentInput />
+        <CommentInput addNewComment={this.addNewComment} />
       </div>
     );
   }
