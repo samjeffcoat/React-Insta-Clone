@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from "./components/PostContainer/PostContainer";
-import dummyData from "./dummy-data";
+import PostsPage from "./components/PostContainer/PostsPage";
 
 class App extends React.Component {
   constructor(props) {
@@ -13,14 +11,11 @@ class App extends React.Component {
   }
   componentDidMount() {
     console.log("CDM is working");
-    this.setState({ posts: dummyData });
   }
   render() {
-    console.log(dummyData);
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer posts={this.state.posts} />
+        <PostsPage />
       </div>
     );
   }
