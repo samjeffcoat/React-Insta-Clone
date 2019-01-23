@@ -19,6 +19,8 @@ class Login extends React.Component {
   render() {
     return (
       <div className="login">
+        <h1>Welcome to my Instahack!</h1>
+        <h2>Please login below</h2>
         <div>
           <Form>
             <FormGroup>
@@ -38,7 +40,7 @@ class Login extends React.Component {
               />
             </FormGroup>
           </Form>
-          <Button color="yellow" size="medium" onClick={this.state.handleLogin}>
+          <Button color="yellow" size="medium" onClick={this.handleLogin}>
             Log In
           </Button>
         </div>
