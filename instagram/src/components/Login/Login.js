@@ -38,7 +38,9 @@ class Login extends React.Component {
               />
             </FormGroup>
           </Form>
-          <Button />
+          <Button color="yellow" size="medium" onClick={this.state.handleLogin}>
+            Log In
+          </Button>
         </div>
       </div>
     );
