@@ -28,6 +28,7 @@ class CommentSection extends React.Component {
       newCommentText: " "
     });
   };
+  /*
   increaseLikes = id => {
     let newLikes = [...this.state.likes];
     newLikes = newLikes.map(like => {
@@ -38,7 +39,7 @@ class CommentSection extends React.Component {
     });
     this.setState({ like: newLikes });
   };
-
+*/
   render() {
     return (
       <div>
