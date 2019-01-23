@@ -28,6 +28,16 @@ class CommentSection extends React.Component {
       newCommentText: " "
     });
   };
+  increaseLikes = id => {
+    let newLikes = [...this.state.likes];
+    newLikes = newLikes.map(like => {
+      if (like.id === id) {
+        like.likes++;
+      }
+      return like;
+    });
+    this.setState({ like: newLikes });
+  };
 
   render() {
     return (
