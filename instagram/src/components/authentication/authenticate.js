@@ -1,0 +1,1 @@
+/*Inside that directory create a HOC called authenticate*/
