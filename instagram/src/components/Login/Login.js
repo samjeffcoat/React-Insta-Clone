@@ -8,6 +8,14 @@ class Login extends React.Component {
       password: " "
     };
   }
+  handleInputChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+  handleLogin = e => {
+    const user = this.state.username;
+    localStorage.setItem("user", user);
+    window.location.reload();
+  };
   render() {
     return (
       <div className="login">
