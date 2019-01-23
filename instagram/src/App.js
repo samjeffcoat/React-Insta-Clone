@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import PostsPage from "./components/PostContainer/PostsPage";
+import authenticate from "./components/authentication/authenticate";
 
 class App extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <PostsPage />
+        <authenticate />
       </div>
     );
   }
