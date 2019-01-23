@@ -29,7 +29,13 @@ class Login extends React.Component {
                 value={this.state.username}
                 onChange={this.handleInputChange}
               />
-              <Input type="text" id="password" placeholder="password" />
+              <Input
+                type="text"
+                placeholder="password"
+                name="password"
+                value={this.state.password}
+                onChange={this.handleInputChange}
+              />
             </FormGroup>
           </Form>
           <Button />
