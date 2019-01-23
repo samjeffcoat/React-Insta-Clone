@@ -10,7 +10,11 @@ const authenticate = App => Login =>
         loggedIn: false
       }
     }
-
+    componentDidMount() {
+      if (!localStorage.getItem('user')) {
+        this.setState({loggedIn:false});
+      }
+    }
     render() {
       return <App />;
     }
