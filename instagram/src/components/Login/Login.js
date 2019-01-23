@@ -22,7 +22,13 @@ class Login extends React.Component {
         <div>
           <Form>
             <FormGroup>
-              <Input type="text" id="username" placeholder="username" />
+              <Input
+                type="text"
+                placeholder="username"
+                name="username"
+                value={this.state.username}
+                onChange={this.handleInputChange}
+              />
               <Input type="text" id="password" placeholder="password" />
             </FormGroup>
           </Form>
