@@ -8,27 +8,30 @@ import Heart from "../../photos/heart.svg";
 import User from "../../photos/user-icon.png";
 import "../SearchBar/SearchBar.css";
 
-class SearchBar extends Component {
-  render() {
-    return (
-      <div className="search-bar-wrap">
-        <div>
-          <img alt="camera-logo" src={Camera} className="logo" />
-          <img alt="inst-logo" src={Instagram} className="logo" />
-        </div>
-        <Form>
-          <FormGroup className="search">
-            <Input type="text" id="sampleSearch" placeholder="Search" />
-          </FormGroup>
-        </Form>
-        <div>
-          <img alt="compass" src={Compass} className="logo" />
-          <img alt="heart" src={Heart} className="logo" />
-          <img alt="user icon" src={User} className="logo" />
-        </div>
+const SearchBar = props => {
+  console.log("we sure are handling that search...");
+  return (
+    <div className="search-bar-wrap">
+      <div>
+        <img alt="camera-logo" src={Camera} className="logo" />
+        <img alt="inst-logo" src={Instagram} className="logo" />
       </div>
-    );
-  }
-}
+      <Form>
+        <FormGroup className="search">
+          <Input
+            type="text"
+            placeholder="Search"
+            onKeyDown={props.searchPosts}
+          />
+        </FormGroup>
+      </Form>
+      <div>
+        <img alt="compass" src={Compass} className="logo" />
+        <img alt="heart" src={Heart} className="logo" />
+        <img alt="user icon" src={User} className="logo" />
+      </div>
+    </div>
+  );
+};
 
 export default SearchBar;
