@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Comment from "./Comment";
 import CommentInput from "./CommentInput";
+
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
@@ -27,6 +28,12 @@ class CommentSection extends React.Component {
       ],
       newCommentText: " "
     });
+  };
+  /*
+  incrementLikes = () => {
+    this.setState(prevState => ({
+      likes: ++prevState.likes
+    }));
   };
   /*
   increaseLikes = id => {
